@@ -5,6 +5,7 @@ description = "Simple image tools!!! SIMPLE SIMPLE"
 readme = "README.md"
 requires-python = ">=3.10"
 dependencies = [
+    "flask>=3.1.2",
     "pillow>=11.3.0",
     "reportlab>=4.4.3",
     "typer>=0.16.1",
