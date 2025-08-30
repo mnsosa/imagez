@@ -1,0 +1,13 @@
+services:
+  imagez:
+    build: .
+    ports:
+      - "5051:5000"
+    environment:
+      - UV_LINK_MODE=copy
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "timeout 2 bash -lc '</dev/tcp/127.0.0.1/5000' || exit 1"]
+      interval: 10s
+      timeout: 3s
+      retries: 6

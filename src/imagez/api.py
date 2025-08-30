@@ -10,12 +10,12 @@ app = Flask(__name__)
 BASE_DIR = Path(__file__).resolve().parent
 UPLOADS_DIR = BASE_DIR / "uploads"
 OUTPUTS_DIR = BASE_DIR / "outputs"
-TEMPLATE_PATH = BASE_DIR / "template.html"
 UPLOADS_DIR.mkdir(exist_ok=True, parents=True)
 OUTPUTS_DIR.mkdir(exist_ok=True, parents=True)
 
 def get_html_template() -> str:
-    return TEMPLATE_PATH.read_text(encoding="utf-8")
+    from imagez.template import HTML_TEMPLATE
+    return HTML_TEMPLATE
 
 @app.after_request
 def no_cache(resp):
