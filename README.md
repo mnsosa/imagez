@@ -1,26 +1,34 @@
 # Imagez
 
-**Imagez** is a simple CLI tool to prepare images for printing, especially useful if you want to frame a photo or artwork and need it to fit an exact size with custom padding.  
+**Imagez** is a simple tool to prepare images for printing.
+It works both as a CLI and as a web app, especially useful if you want to frame a photo or artwork and need it to fit an exact size with custom padding.
 
 It can resize any input image to the dimensions you choose (in centimeters), add padding in any color, and optionally center it on an A4 sheet (PNG or PDF) ready for printing.
 
 ![ExcaliCron](assets/excali_cron.png)
 
+Alongside the CLI, you can also use the web app:
+
+![WebExample](assets/web_example.png)
+
 ---
 
-## Installation
+## Installation (CLI)
 
 Using **uv**:
 
     uv tool install imagez
 
-Using **pipx**:
+## Web App (Docker)
 
-    pipx install imagez
+You can run the web version with Docker Compose:
 
+    docker compose up -d
+
+Then open your browser at: http://localhost:5051
 ---
 
-## Usage
+## Usage (CLI)
 
     imagez PATH [OPTIONS]
 
